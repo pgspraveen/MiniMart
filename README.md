@@ -16,24 +16,32 @@ MiniMart is a simple e-commerce web application where users can register, login,
 
 ## Technologies Used
 
-- Frontend: React.js, Axios, CSS  
-- Backend: Node.js, Express.js, JWT  
-- Database: MongoDB  
+- **Frontend:** React.js, Axios, CSS  
+- **Backend:** Node.js, Express.js, JWT  
+- **Database:** MongoDB  
+
+---
+
+## Project Structure
+
+### Backend
+- `server.js` - Main backend server
+- `model/User.js` - User schema
+- `model/Product.js` - Product schema
+- `middleware.js` - JWT authentication middleware
+
+### Frontend
+- `App.jsx` - Main React app
+- `components/` - Contains Nav, Register, Login, MyProfile, ProductList
+- `index.jsx` - Entry point
+- `*.css` - Styling for each component
 
 ---
 
 ## Installation
 
 ### Backend
-
 ```bash
 cd backend
 npm install
-
-### Frontend
-
-cd frontend
-npm install
-npm start
-
 node server.js
