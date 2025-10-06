@@ -29,4 +29,11 @@ MiniMart is a simple e-commerce web application where users can register, login,
 ```bash
 cd backend
 npm install
+
+### Frontend
+
+cd frontend
+npm install
+npm start
+
 node server.js
