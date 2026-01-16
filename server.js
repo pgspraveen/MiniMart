@@ -6,6 +6,9 @@ import jwt from 'jsonwebtoken'; // Import JWT for authentication
 import User from './model/User.js'; // Import User model
 import Product from './model/Product.js'; // Import Product model
 import authMiddleware from './middleware.js'; // Import custom authentication middleware
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const app = express(); // Create Express app
 const PORT = 5000; // Define server port
@@ -15,12 +18,9 @@ app.use(cors({ origin: '*' })); // Enable CORS for all origins
 app.use(express.json()); // Parse JSON request bodies
 
 // ----------------- CONNECT TO MONGODB -----------------
-mongoose.connect(
-  'mongodb+srv://pgspraveenn:pgspraveenn@cluster0.v7bxvcv.mongodb.net/simple_ecommerce?retryWrites=true&w=majority',
-  { useNewUrlParser: true, useUnifiedTopology: true } // Connection options
-)
-.then(() => console.log('✅ MongoDB Connected (simple_ecommerce DB)')) // Success message
-.catch(err => console.log(err)); // Log errors if connection fails
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
 
 // ----------------- AUTH ROUTES -----------------
 
