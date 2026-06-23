@@ -1,47 +1,56 @@
-# MiniMart 🛒
+# 🛒 MiniMart
 
-MiniMart is a simple e-commerce web application where users can register, login, view products, add products to cart, and place orders.  
+MiniMart is a full-stack e-commerce web application built using the MERN stack. It provides secure user authentication, product browsing, and cart management functionalities. The application was deployed on AWS EC2 using PM2.
 
----
+## 🚀 Features
 
-## Features
+* User Registration and Login
+* JWT Authentication
+* User Profile
+* Product Listing
+* Add to Cart
+* Remove from Cart
+* MongoDB Integration
+* REST APIs
+* AWS EC2 Deployment
 
-- User registration and login with JWT authentication
-- Display products with price and description
-- Add products to cart and remove from cart
-- Place orders from the cart
-- Profile page shows user info and cart items
+## 🛠️ Tech Stack
 
----
+* React.js
+* Node.js
+* Express.js
+* MongoDB Atlas
+* JWT
+* Axios
+* AWS EC2
+* PM2
 
-## Technologies Used
-
-- **Frontend:** React.js, Axios, CSS  
-- **Backend:** Node.js, Express.js, JWT  
-- **Database:** MongoDB  
-
----
-
-## Project Structure
-
-### Backend
-- `server.js` - Main backend server
-- `model/User.js` - User schema
-- `model/Product.js` - Product schema
-- `middleware.js` - JWT authentication middleware
-
-### Frontend
-- `App.jsx` - Main React app
-- `components/` - Contains Nav, Register, Login, MyProfile, ProductList
-- `index.jsx` - Entry point
-- `*.css` - Styling for each component
-
----
-
-## Installation
+## ⚙️ Installation
 
 ### Backend
+
 ```bash
-cd backend
 npm install
 node server.js
+```
+
+### Frontend
+
+```bash
+cd my-app
+npm install
+npm run dev
+```
+
+## 🎥 Project Demo
+
+Google Drive Video Link:
+https://drive.google.com/file/d/13q8WQdVKGDM2YFxBm5F6QqEOQNsPrW3E/view?usp=sharing
+
+## 👨‍💻 Author
+
+**Guna Sai Praveen Pemmada**
+
+LinkedIn: https://www.linkedin.com/in/guna-sai-praveen-pemmada-987457285/
+
+GitHub: https://github.com/pgspraveen
