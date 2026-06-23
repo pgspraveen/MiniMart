@@ -13,7 +13,7 @@ const MyProfile = ({ token, cart, setCart }) => {
   // Fetch user profile data on component mount or when token changes
   useEffect(() => {
     if (token) { // Check if user is logged in
-      axios.get('http://localhost:5000/myprofile', {
+      axios.get('http://54.89.203.39:5000/myprofile', {
         headers: { 'x-token': token } // Send token in headers for authentication
       }).then(res => setData(res.data)) // Store fetched user data
         .catch(err => console.log(err)); // Log any errors

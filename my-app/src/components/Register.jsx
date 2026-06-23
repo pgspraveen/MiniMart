@@ -21,7 +21,7 @@ const Register = () => {
   // Function to handle form submission
   const submitHandler = e => {
     e.preventDefault(); // Prevent default form submission behavior (page reload)
-    axios.post('http://localhost:5000/register', data) // Send POST request to backend
+    axios.post('http://54.89.203.39:5000/register', data) // Send POST request to backend
       .then(res => alert(res.data)) // Show success message in alert
       .catch(err => alert(err.response.data)); // Show error message in alert if registration fails
   };

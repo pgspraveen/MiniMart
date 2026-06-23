@@ -18,7 +18,7 @@ const Login = ({ setToken }) => {
   // Function to handle form submission
   const submitHandler = e => {
     e.preventDefault(); // Prevent default form submit behavior
-    axios.post('http://localhost:5000/login', data) // Send POST request to backend
+    axios.post('http://54.89.203.39:5000/login', data) // Send POST request to backend
       .then(res => {
         setToken(res.data.token); // Update token in parent context
         localStorage.setItem('token', res.data.token); // Store token in localStorage

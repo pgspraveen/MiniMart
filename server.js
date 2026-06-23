@@ -11,7 +11,7 @@ dotenv.config();
 
 
 const app = express(); // Create Express app
-const PORT = 5000; // Define server port
+const PORT = process.env.PORT || 5000;// Define server port
 const JWT_SECRET = 'jwtSecret'; // Secret key for JWT signing
 
 app.use(cors({ origin: '*' })); // Enable CORS for all origins
@@ -126,4 +126,4 @@ app.delete('/deleteproduct/:id', authMiddleware(JWT_SECRET), async (req, res) =>
 });
 
 // ----------------- START SERVER -----------------
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`)); // Start server
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`)); // Start server

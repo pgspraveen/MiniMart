@@ -9,7 +9,7 @@ const ProductList = ({ token, cart, setCart }) => {
   // Fetch products from server whenever token changes
   useEffect(() => {
     if (token) { // Only fetch if user is logged in
-      axios.get('http://localhost:5000/products', {
+      axios.get('http://54.89.203.39:5000/products', {
         headers: { 'x-token': token } // Send token for authentication
       })
       .then(res => setProducts(res.data)) // Store fetched products in state
